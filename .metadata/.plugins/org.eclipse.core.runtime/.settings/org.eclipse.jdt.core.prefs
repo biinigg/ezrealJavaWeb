@@ -1,0 +1,30 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=D\:/eclipse/Eclipse IDE for Java EE Developers/eclipse/
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Java/jdk1.7.0_51/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Program Files/Java/jdk1.7.0_51/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=D\:/eclipse/Eclipse IDE for Java EE Developers/eclipse/plugins/org.junit_4.11.0.v201303080030/
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Administrator/.m2/repository
+org.eclipse.jdt.core.codeComplete.argumentPrefixes=
+org.eclipse.jdt.core.codeComplete.argumentSuffixes=
+org.eclipse.jdt.core.codeComplete.fieldPrefixes=
+org.eclipse.jdt.core.codeComplete.fieldSuffixes=
+org.eclipse.jdt.core.codeComplete.localPrefixes=
+org.eclipse.jdt.core.codeComplete.localSuffixes=
+org.eclipse.jdt.core.codeComplete.staticFieldPrefixes=
+org.eclipse.jdt.core.codeComplete.staticFieldSuffixes=
+org.eclipse.jdt.core.codeComplete.staticFinalFieldPrefixes=
+org.eclipse.jdt.core.codeComplete.staticFinalFieldSuffixes=
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
+org.eclipse.jdt.core.compiler.compliance=1.8
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.source=1.8
+org.eclipse.jdt.core.userLibrary.Apache=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="/Jar/jar/Apache/commons-codec-1.9.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/commons-dbcp-1.4.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/commons-fileupload-1.3.1.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/commons-io-2.4.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/commons-pool-1.6.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/httpclient-4.5.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/httpcore-4.4.1.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/mybatis-3.2.8.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/org.apache.commons.logging_1.1.1.v201101211721.jar"/>\r\n\t<archive path\="/Jar/jar/Apache/poi-3.13-20150929.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.JDBC=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="/Jar/jar/JDBC-Driver/ifxjdbc.jar"/>\r\n\t<archive path\="/Jar/jar/JDBC-Driver/mysql-connector-java-5.1.32-bin.jar"/>\r\n\t<archive path\="/Jar/jar/JDBC-Driver/oracle.jar"/>\r\n\t<archive path\="/Jar/jar/JDBC-Driver/sqljdbc4.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.JSON=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="/Jar/jar/JSON/jackson-core-asl-1.9.12.jar"/>\r\n\t<archive path\="/Jar/jar/JSON/jackson-mapper-asl-1.9.12.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.Spring=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.asm_3.1.1.RELEASE.jar"/>\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.beans_3.1.1.RELEASE.jar"/>\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.context_3.1.1.RELEASE.jar"/>\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.core_3.1.1.RELEASE.jar"/>\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.expression_3.1.1.RELEASE.jar"/>\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.web_3.1.1.RELEASE.jar"/>\r\n\t<archive path\="/Jar/jar/Spring/org.springframework.web.servlet_3.1.1.RELEASE.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.Tools=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="/Jar/jar/Tools/compiler.jar"/>\r\n\t<archive path\="/Jar/jar/Tools/yuicompressor-2.4.7.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.dom4j=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="/Jar/jar/dom4j/dom4j-2.0.0-ALPHA-2.jar"/>\r\n</userlibrary>\r\n

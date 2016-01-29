@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC  "-//SPRING/DTD BEAN/EN"  "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- functions -->
+	<!-- Main -->
+	<bean id="login" class="com.dsc.dci.jweb.funcs.main.login.LoginController" />
+	<!-- Configs -->
+	<bean id="sysdbconfig"
+		class="com.dsc.dci.jweb.funcs.configs.sysdbconfig.SysDBConfigController" />
+</beans>
+

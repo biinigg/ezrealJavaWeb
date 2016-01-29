@@ -1,0 +1,7 @@
+[2015-03-31 15:47:33] [info]  [ 8828] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2015-03-31 15:47:33] [info]  [ 8828] Service Tomcat7 name Apache Tomcat 7
+[2015-03-31 15:47:33] [error] [ 8828] 指定的服務已存在。
+[2015-03-31 15:47:33] [error] [ 8828] Failed installing 'Tomcat7' service
+[2015-03-31 15:47:33] [error] [ 8828] 指定的服務已存在。
+[2015-03-31 15:47:33] [error] [ 8828] Commons Daemon procrun failed with exit value: 8 (Failed to install service)
+[2015-03-31 15:47:33] [error] [ 8828] 指定的服務已存在。

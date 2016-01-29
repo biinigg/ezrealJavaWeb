@@ -1,0 +1,143 @@
+package com.dci.jweb;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSource;
+public class DataBaseObj {
+	private static DataBaseObj _parames;
+	private DataSource erpDatasource;
+	private DataSource sysDatasource;
+
+	public static DataBaseObj getInstance() {
+		synchronized (DataBaseObj.class) {
+			if (_parames == null) {
+				_parames = new DataBaseObj();
+			}
+		}
+		return _parames;
+	}
+
+	public void clearDataSource(ConnectionType conntype) {
+		if (conntype == ConnectionType.SYS) {
+			this.sysDatasource = null;
+		} else if (conntype == ConnectionType.ERP) {
+			this.erpDatasource = null;
+		}
+	}
+
+	public void createDataSource(IDBInfoBean DBInfo, ConnectionType conntype) {
+
+		try {
+			if (conntype == ConnectionType.ERP) {
+				this.erpDatasource = new Database().createConnectionPool(DBInfo);
+			} else if (conntype == ConnectionType.SYS) {
+				this.sysDatasource = new Database().createConnectionPool(DBInfo);
+			} else {
+				System.out.println("DCIErr-DB001:Connection type setting error " + conntype.toString());
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			System.out.println("DCIErr-DB003:DataSource create error");
+		}
+	}
+
+	public Connection getConnection(ConnectionType conntype) {
+		Connection conn = null;
+		try {
+			if (conntype == ConnectionType.ERP) {
+				if (this.erpDatasource != null) {
+					conn = this.erpDatasource.getConnection();
+				}
+			} else if (conntype == ConnectionType.SYS) {
+				if (this.sysDatasource != null) {
+					conn = this.sysDatasource.getConnection();
+				}
+			}
+		} catch (Exception ex) {
+			conn = null;
+			ex.printStackTrace();
+			System.out.println("DCIErr-DB002:Get connection from datasource error by type " + conntype);
+		}
+		return conn;
+	}
+
+	public boolean isDataSourceExist(ConnectionType conntype) {
+		boolean exist = false;
+		if (conntype == ConnectionType.ERP) {
+			exist = this.erpDatasource != null;
+		} else if (conntype == ConnectionType.SYS) {
+			exist = this.sysDatasource != null;
+		}
+		return exist;
+	}
+
+	public void copySysDBConfigSetting(DBInfoBean bean) {
+		if (bean == null) {
+			bean = new DBInfoBean();
+		}
+
+		if (this.sysDatasource == null) {
+			bean = null;
+		} else {
+			BasicDataSource bds = (BasicDataSource) this.sysDatasource;
+
+			bean.setMaxActive(bds.getMaxActive());
+			bean.setMaxIdle(bds.getMaxIdle());
+			bean.setMinIdle(bds.getMinIdle());
+			bean.setMaxWait(bds.getMaxWait());
+			bean.setRemoveAbandoned(bds.getRemoveAbandoned());
+			bean.setRemoveAbandonedTimeout(bds.getRemoveAbandonedTimeout());
+		}
+	}
+
+	public DBInfoBean copySysDBConfigSetting() {
+		DBInfoBean bean = new DBInfoBean();
+
+		if (this.sysDatasource == null) {
+			bean = null;
+		} else {
+			BasicDataSource bds = (BasicDataSource) this.sysDatasource;
+
+			bean.setMaxActive(bds.getMaxActive());
+			bean.setMaxIdle(bds.getMaxIdle());
+			bean.setMinIdle(bds.getMinIdle());
+			bean.setMaxWait(bds.getMaxWait());
+			bean.setRemoveAbandoned(bds.getRemoveAbandoned());
+			bean.setRemoveAbandonedTimeout(bds.getRemoveAbandonedTimeout());
+		}
+
+		return bean;
+	}
+	
+	public void closeConnection(ResultSet rs, PreparedStatement ps, Connection conn) {
+		if (rs != null) {
+			try {
+				rs.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		if (ps != null) {
+			try {
+				ps.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		try {
+			if (conn != null && !conn.isClosed()) {
+				conn.close();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

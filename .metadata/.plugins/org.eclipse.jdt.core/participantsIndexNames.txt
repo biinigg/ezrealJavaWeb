@@ -1,0 +1,17 @@
+INDEX VERSION 1.127
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3437069677.index
+\POS\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\875222509.index
+\Ezreal\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4116431324.index
+\POS\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1827613267.index
+\POS\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1687608613.index
+\POS\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3958255226.index
+\POS\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2993849657.index
+\Ezreal\src
+D:\2015\program\web\ezrealJavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2905018587.index
+\POS\src

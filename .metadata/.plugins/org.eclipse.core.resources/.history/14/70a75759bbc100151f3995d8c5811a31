@@ -1,0 +1,5 @@
+package com.dsc.dci.jweb.funcs.main.login;
+
+public class LoginController {
+
+}

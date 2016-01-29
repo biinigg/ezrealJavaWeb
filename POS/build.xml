@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="POS">
+    <property environment="env"/>
+    <property name="Jar.location" value="../Jar"/>
+    <property name="ECLIPSE_HOME" value="../../../../../eclipse/Eclipse IDE for Java EE Developers/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="POS/WEB-INF/lib/javax.servlet.jsp.jar"/>
+        <pathelement location="POS/WEB-INF/lib/servlet-api.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="Apache.userclasspath">
+        <pathelement location="../../../../../Jar/jar/Apache/commons-codec-1.9.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/commons-dbcp-1.4.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/commons-fileupload-1.3.1.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/commons-io-2.4.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/commons-pool-1.6.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/httpclient-4.5.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/httpcore-4.4.1.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/mybatis-3.2.8.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+        <pathelement location="../../../../../Jar/jar/Apache/poi-3.13-20150929.jar"/>
+    </path>
+    <path id="dom4j.userclasspath">
+        <pathelement location="../../../../../Jar/jar/dom4j/dom4j-2.0.0-ALPHA-2.jar"/>
+    </path>
+    <path id="JDBC.userclasspath">
+        <pathelement location="../../../../../Jar/jar/JDBC-Driver/ifxjdbc.jar"/>
+        <pathelement location="../../../../../Jar/jar/JDBC-Driver/mysql-connector-java-5.1.32-bin.jar"/>
+        <pathelement location="../../../../../Jar/jar/JDBC-Driver/oracle.jar"/>
+        <pathelement location="../../../../../Jar/jar/JDBC-Driver/sqljdbc4.jar"/>
+    </path>
+    <path id="JSON.userclasspath">
+        <pathelement location="../../../../../Jar/jar/JSON/jackson-core-asl-1.9.12.jar"/>
+        <pathelement location="../../../../../Jar/jar/JSON/jackson-mapper-asl-1.9.12.jar"/>
+    </path>
+    <path id="Spring.userclasspath">
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.asm_3.1.1.RELEASE.jar"/>
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.beans_3.1.1.RELEASE.jar"/>
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.context_3.1.1.RELEASE.jar"/>
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.core_3.1.1.RELEASE.jar"/>
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.expression_3.1.1.RELEASE.jar"/>
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.web_3.1.1.RELEASE.jar"/>
+        <pathelement location="../../../../../Jar/jar/Spring/org.springframework.web.servlet_3.1.1.RELEASE.jar"/>
+    </path>
+    <path id="Tools.userclasspath">
+        <pathelement location="../../../../../Jar/jar/Tools/compiler.jar"/>
+        <pathelement location="../../../../../Jar/jar/Tools/yuicompressor-2.4.7.jar"/>
+    </path>
+    <path id="POS.classpath">
+        <pathelement location="POS/WEB-INF/classes"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <pathelement location="${Jar.location}/jar/javax.servlet.jsp.jar"/>
+        <pathelement location="${Jar.location}/jar/servlet-api.jar"/>
+        <path refid="Apache.userclasspath"/>
+        <path refid="dom4j.userclasspath"/>
+        <path refid="JDBC.userclasspath"/>
+        <path refid="JSON.userclasspath"/>
+        <path refid="Spring.userclasspath"/>
+        <path refid="Tools.userclasspath"/>
+        <pathelement location="${Jar.location}/jar/FizDataBase.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="POS/WEB-INF/classes"/>
+        <copy includeemptydirs="false" todir="POS/WEB-INF/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="POS/WEB-INF/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="POS/WEB-INF/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="POS.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

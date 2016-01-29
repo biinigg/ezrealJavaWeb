@@ -1,0 +1,24 @@
+二月 25, 2015 2:23:23 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: contextInitialized()
+二月 25, 2015 2:23:23 下午 org.apache.catalina.core.ApplicationContext log
+資訊: SessionListener: contextInitialized()
+二月 25, 2015 2:23:23 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@30a945f8')
+二月 25, 2015 2:35:28 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: contextInitialized()
+二月 25, 2015 2:35:28 下午 org.apache.catalina.core.ApplicationContext log
+資訊: SessionListener: contextInitialized()
+二月 25, 2015 2:35:28 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@644fdf4b')
+二月 25, 2015 2:59:18 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: contextInitialized()
+二月 25, 2015 2:59:18 下午 org.apache.catalina.core.ApplicationContext log
+資訊: SessionListener: contextInitialized()
+二月 25, 2015 2:59:18 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@4200de57')
+二月 25, 2015 4:04:05 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: contextInitialized()
+二月 25, 2015 4:04:05 下午 org.apache.catalina.core.ApplicationContext log
+資訊: SessionListener: contextInitialized()
+二月 25, 2015 4:04:05 下午 org.apache.catalina.core.ApplicationContext log
+資訊: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@3e67f47c')

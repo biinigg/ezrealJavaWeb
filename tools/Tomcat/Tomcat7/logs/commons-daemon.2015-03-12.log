@@ -1,0 +1,7 @@
+[2015-03-12 11:15:20] [info]  [20768] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2015-03-12 11:15:20] [info]  [20768] Service Tomcat7 name Apache Tomcat 7
+[2015-03-12 11:15:20] [error] [20768] 指定的服務已存在。
+[2015-03-12 11:15:20] [error] [20768] Failed installing 'Tomcat7' service
+[2015-03-12 11:15:20] [error] [20768] 指定的服務已存在。
+[2015-03-12 11:15:20] [error] [20768] Commons Daemon procrun failed with exit value: 8 (Failed to install service)
+[2015-03-12 11:15:20] [error] [20768] 指定的服務已存在。

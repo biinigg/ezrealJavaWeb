@@ -1,0 +1,14 @@
+[2015-03-04 12:07:54] [info]  [ 4972] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2015-03-04 12:07:54] [info]  [ 4972] Service Tomcat7 name Apache Tomcat 7
+[2015-03-04 12:07:55] [info]  [ 4972] Service 'Tomcat7' installed
+[2015-03-04 12:07:55] [info]  [ 4972] Commons Daemon procrun finished
+[2015-03-04 12:07:55] [info]  [ 4620] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2015-03-04 12:07:55] [info]  [ 4620] Updating service...
+[2015-03-04 12:07:55] [info]  [ 4620] Service 'Tomcat7' updated
+[2015-03-04 12:07:55] [info]  [ 4620] Update service finished.
+[2015-03-04 12:07:55] [info]  [ 4620] Commons Daemon procrun finished
+[2015-03-04 12:07:56] [info]  [ 6376] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2015-03-04 12:07:56] [info]  [ 6376] Updating service...
+[2015-03-04 12:07:56] [info]  [ 6376] Service 'Tomcat7' updated
+[2015-03-04 12:07:56] [info]  [ 6376] Update service finished.
+[2015-03-04 12:07:56] [info]  [ 6376] Commons Daemon procrun finished

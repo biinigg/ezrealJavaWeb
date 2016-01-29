@@ -1,0 +1,116 @@
+二月 25, 2015 2:23:22 下午 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.7.0_75\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;%CATALINA_HOME%\bin;C:\Program Files\Java\jdk1.7.0_75\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Apache Software Foundation\apache-ant-1.9.4\bin;;.
+二月 25, 2015 2:23:22 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+二月 25, 2015 2:23:22 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 25, 2015 2:23:22 下午 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 1033 ms
+二月 25, 2015 2:23:22 下午 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+二月 25, 2015 2:23:22 下午 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.47
+二月 25, 2015 2:23:22 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\docs
+二月 25, 2015 2:23:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\examples
+二月 25, 2015 2:23:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\host-manager
+二月 25, 2015 2:23:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\manager
+二月 25, 2015 2:23:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\ROOT
+二月 25, 2015 2:23:23 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+二月 25, 2015 2:23:23 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 25, 2015 2:23:23 下午 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 939 ms
+二月 25, 2015 2:35:26 下午 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.7.0_75\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\Tools\Tomcat\Tomcat7\bin;C:\Program Files\Java\jdk1.7.0_75\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Apache Software Foundation\apache-ant-1.9.4\bin;;.
+二月 25, 2015 2:35:26 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+二月 25, 2015 2:35:27 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 25, 2015 2:35:27 下午 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 767 ms
+二月 25, 2015 2:35:27 下午 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+二月 25, 2015 2:35:27 下午 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.47
+二月 25, 2015 2:35:27 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\docs
+二月 25, 2015 2:35:27 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\examples
+二月 25, 2015 2:35:28 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\host-manager
+二月 25, 2015 2:35:28 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\manager
+二月 25, 2015 2:35:28 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\ROOT
+二月 25, 2015 2:35:28 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+二月 25, 2015 2:35:29 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 25, 2015 2:35:29 下午 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 1992 ms
+二月 25, 2015 2:59:16 下午 org.apache.catalina.core.AprLifecycleListener init
+資訊: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.7.0_75\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\Tools\Tomcat\Tomcat7\bin;C:\Program Files\Java\jdk1.7.0_75\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Apache Software Foundation\apache-ant-1.9.4\bin;;.
+二月 25, 2015 2:59:17 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["http-bio-8080"]
+二月 25, 2015 2:59:17 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 25, 2015 2:59:17 下午 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 1003 ms
+二月 25, 2015 2:59:17 下午 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+二月 25, 2015 2:59:17 下午 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.47
+二月 25, 2015 2:59:17 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\docs
+二月 25, 2015 2:59:17 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\examples
+二月 25, 2015 2:59:18 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\host-manager
+二月 25, 2015 2:59:18 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\manager
+二月 25, 2015 2:59:18 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\ROOT
+二月 25, 2015 2:59:18 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["http-bio-8080"]
+二月 25, 2015 2:59:18 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 25, 2015 2:59:18 下午 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 1197 ms
+二月 25, 2015 4:04:04 下午 org.apache.catalina.core.AprLifecycleListener init
+資訊: Loaded APR based Apache Tomcat Native library 1.1.32 using APR version 1.5.1.
+二月 25, 2015 4:04:04 下午 org.apache.catalina.core.AprLifecycleListener init
+資訊: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+二月 25, 2015 4:04:05 下午 org.apache.catalina.core.AprLifecycleListener initializeSSL
+資訊: OpenSSL successfully initialized (OpenSSL 1.0.1j 15 Oct 2014)
+二月 25, 2015 4:04:05 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["http-apr-8080"]
+二月 25, 2015 4:04:05 下午 org.apache.coyote.AbstractProtocol init
+資訊: Initializing ProtocolHandler ["ajp-apr-8009"]
+二月 25, 2015 4:04:05 下午 org.apache.catalina.startup.Catalina load
+資訊: Initialization processed in 1040 ms
+二月 25, 2015 4:04:05 下午 org.apache.catalina.core.StandardService startInternal
+資訊: Starting service Catalina
+二月 25, 2015 4:04:05 下午 org.apache.catalina.core.StandardEngine startInternal
+資訊: Starting Servlet Engine: Apache Tomcat/7.0.47
+二月 25, 2015 4:04:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\docs
+二月 25, 2015 4:04:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\examples
+二月 25, 2015 4:04:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\host-manager
+二月 25, 2015 4:04:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\manager
+二月 25, 2015 4:04:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+資訊: Deploying web application directory D:\Tools\Tomcat\Tomcat7\webapps\ROOT
+二月 25, 2015 4:04:06 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["http-apr-8080"]
+二月 25, 2015 4:04:06 下午 org.apache.coyote.AbstractProtocol start
+資訊: Starting ProtocolHandler ["ajp-apr-8009"]
+二月 25, 2015 4:04:06 下午 org.apache.catalina.startup.Catalina start
+資訊: Server startup in 934 ms

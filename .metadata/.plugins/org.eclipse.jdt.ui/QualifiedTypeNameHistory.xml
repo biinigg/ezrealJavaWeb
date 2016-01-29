@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Base64"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="com.dsc.dci.sqlcode.sqlLogin"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="org.apache.commons.dbcp.BasicDataSource"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.sqlcode.methods.sqlAPmethods"/>
+<fullyQualifiedTypeName name="com.dci.jweb.DBType"/>
+<fullyQualifiedTypeName name="javax.xml.stream.XMLInputFactory"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="javax.xml.stream.XMLEventReader"/>
+<fullyQualifiedTypeName name="javax.xml.stream.events.XMLEvent"/>
+<fullyQualifiedTypeName name="javax.xml.stream.events.StartElement"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.StringWriter"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.dcimethods.Singleton"/>
+<fullyQualifiedTypeName name="com.dci.jweb.DBInfoBean"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.dcimethods.ConfigControl"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.dcimethods.APConstants"/>
+<fullyQualifiedTypeName name="com.dci.jweb.ConnectionStatus"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.dcimethods.ConfigSaveStatus"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.dcimethods.APmethods"/>
+<fullyQualifiedTypeName name="com.dsc.dci.jweb.dcimethods.FizString"/>
+<fullyQualifiedTypeName name="org.codehaus.jackson.map.ObjectMapper"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.net.NetworkInterface"/>
+<fullyQualifiedTypeName name="java.util.Enumeration"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="com.dci.jweb.DataBaseObj"/>
+<fullyQualifiedTypeName name="com.dci.jweb.ConnectionType"/>
+<fullyQualifiedTypeName name="com.dsc.dci.sqlcode.sqlSysDBConfig"/>
+</qualifiedTypeNameHistroy>

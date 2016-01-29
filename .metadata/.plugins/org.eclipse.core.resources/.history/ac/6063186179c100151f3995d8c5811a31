@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.loginDiagram_div {
+	width: 600px;
+  height: 300px;
+  position: absolute;
+  background-image:url('yourimage.file');
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -300px;
+	background-color: #eaf1fb;
+}

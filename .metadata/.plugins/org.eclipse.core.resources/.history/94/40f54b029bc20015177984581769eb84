@@ -1,0 +1,34 @@
+package com.dsc.dci.jweb.dcimethods;
+
+import org.apache.commons.codec.binary.Base64;
+
+public class FizString {
+	public static String Encode(String str) {
+		String code = null;
+		try {
+			if (str != null && !str.equals("")) {
+				Base64 b64 = new Base64();
+				code = new String(b64.encode(str.getBytes()));
+			}
+		} catch (Exception ex) {
+			code = null;
+			ex.printStackTrace();
+		}
+		return code;
+	}
+
+	public static String Decode(String code) {
+		String str = null;
+		try {
+			if (code != null && !code.equals("")) {
+				Base64 b64 = new Base64();
+				str = new String(b64.decode(code.getBytes()));
+			}
+		} catch (Exception ex) {
+			str = null;
+			ex.printStackTrace();
+		}
+		return str;
+	}
+
+}
