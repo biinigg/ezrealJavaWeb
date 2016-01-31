@@ -1,2 +1,2 @@
 # ezrealJavaWeb
-make a post system!
+make a pos system!
