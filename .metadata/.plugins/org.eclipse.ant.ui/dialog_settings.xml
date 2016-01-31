@@ -17,4 +17,7 @@
 	<item value="158" key="org.eclipse.ant.ui.ant_tasks_page_context.columnWidth2"/>
 	<item value="1024" key="org.eclipse.ant.ui.ant_tasks_page_context.sortDirection"/>
 	<item value="290" key="ant.properties.block.property.columnWidth1"/>
+	<section name="org.eclipse.ant.internal.ui.views.AntView">
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;antView/&gt;" key="memento"/>
+	</section>
 </section>

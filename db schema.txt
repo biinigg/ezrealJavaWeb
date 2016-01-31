@@ -1,0 +1,21 @@
+drop table CONNINFO;
+Create table CONNINFO(
+conn_id char(5) NOT NULL PRIMARY KEY,
+conn_name nvarchar(200),
+conn_desc nvarchar(200),
+db_addr varchar(20),
+db_name varchar(20),
+db_user varchar(20),
+db_pwd varchar(200),
+db_type varchar(10),
+db_port varchar(10),
+visible int,
+);
+Create table ITEMINFO(
+item_id char(5) NOT NULL PRIMARY KEY,
+item_class nvarchar(200),
+item_name nvarchar(200),
+price int,
+);
+
+

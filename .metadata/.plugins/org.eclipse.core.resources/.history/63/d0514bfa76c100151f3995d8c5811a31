@@ -1,7 +1,0 @@
-@CHARSET "UTF-8";
-
-.indexPage_div {
-	border: 0; width = 50%;
-	height: 45vh;
-	background-color: #eaf1fb
-}
