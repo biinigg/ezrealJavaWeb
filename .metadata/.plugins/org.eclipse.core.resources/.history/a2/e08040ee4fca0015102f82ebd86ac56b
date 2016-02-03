@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+Ext.define('FIZ.Customer.numberField', {
+	extend : 'Ext.form.Panel',
+	xtype : 'cusNumberField',
+	alias : 'FIZ.Customer.numberField',
+
+//,
+	//renderer:this.callParent(arguments)
+});

@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+Ext.define('FIZ.Customer.numberField', {
+	extend : 'Ext.form.Panel',
+	xtype : 'cusNumberField',
+	alias : 'FIZ.Customer.numberField',
+	layout:'hbox',
+	items:[{
+		xtype : 'numberfield',
+		labelWidth : 110,
+		fieldLabel : '數量',
+		id : 'num',
+		name : 'num',
+		value : '0',
+		minValue : 0,
+		maxValue : 999
+	},
+	{
+		xtype:'button',
+		cls:'calculator-toolbar'
+	}
+	]
+});

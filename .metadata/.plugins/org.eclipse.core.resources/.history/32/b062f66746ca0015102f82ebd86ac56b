@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+Ext.define('FIZ.Customer.numberField', {
+	extend : 'Ext.form.field.NumberView',
+	xtype : 'cus.numberField',
+	alias : 'FIZ.Customer.numberField',
+	colid : '',
+	text : '',
+	menuDisabled : true,
+	sortable : false,
+	maxWidth : 30,
+	minWidth : 30,
+	width : 30,
+	// imgUrl : './../../images/button_icon/ToolBarSearch.png',
+	renderer : function(value) {
+		this.callParent(arguments);
+		return "<img src='./../../images/button_icon/ToolBarSearch.png' />";
+	}
+});

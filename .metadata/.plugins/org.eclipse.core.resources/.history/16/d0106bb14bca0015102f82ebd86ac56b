@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+Ext.define('FIZ.Customer.numberField', {
+	extend : 'Ext.form.field.Number',
+	xtype : 'cusNumberField',
+	alias : 'FIZ.Customer.numberField',
+	renderer : function(value) {
+		this.callParent(arguments);
+		//return "<img src='./../../images/button_icon/ToolBarSearch.png' />";
+	}
+});

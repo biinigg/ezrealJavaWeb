@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+
+Ext.define('FIZ.Customer.numberField', {
+	extend : 'Ext.form.Panel',
+	xtype : 'cusNumberField',
+	alias : 'FIZ.Customer.numberField',
+	layout : 'hbox',
+	resizable : true,
+	items : [ {
+		xtype : 'numberfield',
+		labelWidth : 90,
+		fieldLabel : '數量',
+		id : 'num',
+		name : 'num',
+		value : '0',
+		minValue : 0,
+		maxValue : 999
+	}, {
+		xtype : 'button',
+		cls : 'calculator-toolbar',
+		height : '30',
+		value : 0,
+		weight : '30',
+		listeners : {
+			click : function() {
+				if (this.value == 1) {
+					digit.hide();
+					this.value=0;
+				} else if (this.value == 0) {
+					digit.show();
+					this.value=1;
+				}
+			}
+		}
+
+	} ]
+});

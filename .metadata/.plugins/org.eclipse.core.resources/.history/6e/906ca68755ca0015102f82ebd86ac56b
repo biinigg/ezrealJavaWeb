@@ -1,0 +1,140 @@
+/**
+ * 
+ */
+function cal() {
+	var count = Ext.getCmp('count').getValue();
+	if (this.value == -1) {
+		Ext.getCmp('count').setValue(0);
+	} else if (this.value == -2) {
+		Ext.getCmp('count').setValue(Math.floor(count / 10));
+	} else {
+		if (count > 0) {
+			Ext.getCmp('count').setValue(count * 10 + this.value);
+		} else {
+			Ext.getCmp('count').setValue(this.value);
+		}
+
+	}
+
+}
+var digitForm = Ext.create('Ext.form.Panel', {
+	title : 'Base Example',
+	bodyPadding : 5,
+	height : 175,
+	layout : {
+		type : 'table',
+		columns : 3
+	},
+	defaults : {
+		bodyStyle : 'padding:20px',
+		handler : cal
+	},
+	items : [ {
+		xtype : 'numberfield',
+		labelWidth : 110,
+		fieldLabel : '數量',
+		id : 'count',
+		name : 'count',
+		value : 0,
+		minValue : 1,
+		maxValue : 999,
+		colspan : 3
+	}, {
+		xtype : 'button',
+		value : 7,
+		text : '7',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 8,
+		text : '8',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 9,
+		text : '9',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 4,
+		text : '4',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 5,
+		text : '5',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 6,
+		text : '6',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 1,
+		text : '1',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 2,
+		text : '2',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 3,
+		text : '3',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : -1,
+		text : '清除',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : 0,
+		text : '0',
+		width : 100
+	}, {
+		xtype : 'button',
+		value : -2,
+		text : '刪除',
+		width : 100
+	} ]
+});
+
+Ext.create('Ext.window.Window', {
+	title : 'Hello',
+	height : 200,
+	width : 400,
+	//layout : 'fit',
+	items : { // Let's put an empty grid in just to illustrate fit layout
+		xtype : 'grid',
+		border : false,
+		columns : [digitForm ], // One header just for show. There's no data,
+		store : Ext.create('Ext.data.ArrayStore', {})
+	// A dummy empty data store
+	}
+}).show();
+Ext.define('FIZ.Customer.numberField', {
+	extend : 'Ext.form.Panel',
+	xtype : 'cusNumberField',
+	alias : 'FIZ.Customer.numberField',
+	layout : 'hbox',
+	resizable : true,
+	items : [ {
+		xtype : 'numberfield',
+		labelWidth : 90,
+		fieldLabel : '數量',
+		id : 'num',
+		name : 'num',
+		value : '0',
+		minValue : 0,
+		maxValue : 999
+	}, {
+		xtype : 'button',
+		cls : 'calculator-toolbar',
+		height : '30',
+		weight : '30',
+		handler : {}
+	} ]
+});

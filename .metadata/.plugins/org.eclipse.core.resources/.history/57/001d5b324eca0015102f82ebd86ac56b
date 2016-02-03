@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+.indexPage_div {
+	width: 560px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-image: url('./../images/images.jpg');
+	margin: -150px 0 0 -220px;
+	background-color: #eaf1fb;}
+	
+.loginDiagram_div {
+	width: 320px;
+	height: 300px;
+	position: absolute;
+	margin: 0 0 0 0;
+}
+.search-toolbar {
+	background-image: url(../images/button_icon/ToolBarSearch.png)
+		!important;
+	border: 1 !important;
+	background-color: transparent !important;
+	background-repeat: no-repeat !important;
+	background-position: left left !important;
+	cursor: pointer !important;
+	margin: 0 !important;
+}
