@@ -4,145 +4,69 @@
 var t1, t2, t3, t4;
 function showPage() {
 
-/*	Ext.Loader.setConfig({
-				enabled : true
-			});
-
-	Ext.Loader.setPath('Ext.ux', '../ux/');
-
-	Ext.require(['Ext.tab.*', 'Ext.ux.TabCloseMenu']);*/
+	/*
+	 * Ext.Loader.setConfig({ enabled : true });
+	 * 
+	 * Ext.Loader.setPath('Ext.ux', '../ux/');
+	 * 
+	 * Ext.require(['Ext.tab.*', 'Ext.ux.TabCloseMenu']);
+	 */
 	Ext.onReady(function() {
 
-		/*var currentItem;
+		/*
+		 * var currentItem;
+		 * 
+		 * var tabs = Ext.widget('tabpanel', { renderTo : 'tabs', resizeTabs :
+		 * true, enableTabScroll : true, width : 600, height : 250, defaults : {
+		 * autoScroll : true, bodyPadding : 10 }, items : [{ title : 'Tab 1',
+		 * iconCls : 'tabs', // html: 'Tab Body<br/><br/>' + //
+		 * Ext.example.bogusMarkup, closable : true }], plugins :
+		 * Ext.create('Ext.ux.TabCloseMenu', { extraItemsTail : ['-', { text :
+		 * 'Closable', checked : true, hideOnClick : true, handler :
+		 * function(item) { currentItem.tab .setClosable(item.checked); } },
+		 * '-', { text : 'Enabled', checked : true, hideOnClick : true, handler :
+		 * function(item) { currentItem.tab .setDisabled(!item.checked); } }],
+		 * listeners : { beforemenu : function(menu, item) { var enabled = menu
+		 * .child('[text="Enabled"]'); menu.child('[text="Closable"]')
+		 * .setChecked(item.closable); if (item.tab.active) { enabled.disable(); }
+		 * else { enabled.enable(); enabled.setChecked(!item.tab .isDisabled()); }
+		 * 
+		 * currentItem = item; } } }) });
+		 *  // tab generation code var index = 0;
+		 * 
+		 * while (index < 3) { addTab(index % 2); }
+		 * 
+		 * function doScroll(item) { var id = item.id.replace('_menu', ''), tab =
+		 * tabs.getComponent(id).tab;
+		 * 
+		 * tabs.getTabBar().layout.overflowHandler.scrollToItem(tab); }
+		 * 
+		 * function addTab(closable) { ++index; tabs.add({ closable :
+		 * !!closable, html : 'Tab Body ' + index + '<br/><br/>',// + //
+		 * Ext.example.bogusMarkup, iconCls : 'tabs', title : 'New Tab ' + index
+		 * }).show(); }
+		 * 
+		 * function addToMenu(ct, tab) { menu.add({ text : tab.title, id :
+		 * tab.id + '_menu', handler : doScroll }); }
+		 * 
+		 * function removeFromMenu(ct, tab) { var id = tab.id + '_menu';
+		 * menu.remove(id); }
+		 * 
+		 * tabs.on({ add : addToMenu, remove : removeFromMenu });
+		 * 
+		 * Ext.widget('button', { iconCls : 'new-tab', renderTo : 'addButtonCt',
+		 * text : 'Add Closable Tab', handler : function() { addTab(true); } });
+		 * 
+		 * Ext.widget('button', { iconCls : 'new-tab', renderTo : 'addButtonCt',
+		 * style : 'margin-left: 8px;', text : 'Add Unclosable Tab', handler :
+		 * function() { addTab(false); } });
+		 * 
+		 * var menu = new Ext.menu.Menu(); tabs.items.each(function(tab) {
+		 * addToMenu(tabs, tab); }); Ext.widget('button', { iconCls : 'scroll',
+		 * renderTo : 'addButtonCt', style : 'margin-left: 8px;', text : 'Scroll
+		 * to:', menu : menu })
+		 */
 
-		var tabs = Ext.widget('tabpanel', {
-					renderTo : 'tabs',
-					resizeTabs : true,
-					enableTabScroll : true,
-					width : 600,
-					height : 250,
-					defaults : {
-						autoScroll : true,
-						bodyPadding : 10
-					},
-					items : [{
-								title : 'Tab 1',
-								iconCls : 'tabs',
-								// html: 'Tab Body<br/><br/>' +
-								// Ext.example.bogusMarkup,
-								closable : true
-							}],
-					plugins : Ext.create('Ext.ux.TabCloseMenu', {
-								extraItemsTail : ['-', {
-									text : 'Closable',
-									checked : true,
-									hideOnClick : true,
-									handler : function(item) {
-										currentItem.tab
-												.setClosable(item.checked);
-									}
-								}, '-', {
-									text : 'Enabled',
-									checked : true,
-									hideOnClick : true,
-									handler : function(item) {
-										currentItem.tab
-												.setDisabled(!item.checked);
-									}
-								}],
-								listeners : {
-									beforemenu : function(menu, item) {
-										var enabled = menu
-												.child('[text="Enabled"]');
-										menu.child('[text="Closable"]')
-												.setChecked(item.closable);
-										if (item.tab.active) {
-											enabled.disable();
-										} else {
-											enabled.enable();
-											enabled.setChecked(!item.tab
-													.isDisabled());
-										}
-
-										currentItem = item;
-									}
-								}
-							})
-				});
-
-		// tab generation code
-		var index = 0;
-
-		while (index < 3) {
-			addTab(index % 2);
-		}
-
-		function doScroll(item) {
-			var id = item.id.replace('_menu', ''), tab = tabs.getComponent(id).tab;
-
-			tabs.getTabBar().layout.overflowHandler.scrollToItem(tab);
-		}
-
-		function addTab(closable) {
-			++index;
-			tabs.add({
-						closable : !!closable,
-						html : 'Tab Body ' + index + '<br/><br/>',// +
-						// Ext.example.bogusMarkup,
-						iconCls : 'tabs',
-						title : 'New Tab ' + index
-					}).show();
-		}
-
-		function addToMenu(ct, tab) {
-			menu.add({
-						text : tab.title,
-						id : tab.id + '_menu',
-						handler : doScroll
-					});
-		}
-
-		function removeFromMenu(ct, tab) {
-			var id = tab.id + '_menu';
-			menu.remove(id);
-		}
-
-		tabs.on({
-					add : addToMenu,
-					remove : removeFromMenu
-				});
-
-		Ext.widget('button', {
-					iconCls : 'new-tab',
-					renderTo : 'addButtonCt',
-					text : 'Add Closable Tab',
-					handler : function() {
-						addTab(true);
-					}
-				});
-
-		Ext.widget('button', {
-					iconCls : 'new-tab',
-					renderTo : 'addButtonCt',
-					style : 'margin-left: 8px;',
-					text : 'Add Unclosable Tab',
-					handler : function() {
-						addTab(false);
-					}
-				});
-
-		var menu = new Ext.menu.Menu();
-		tabs.items.each(function(tab) {
-					addToMenu(tabs, tab);
-				});
-		Ext.widget('button', {
-					iconCls : 'scroll',
-					renderTo : 'addButtonCt',
-					style : 'margin-left: 8px;',
-					text : 'Scroll to:',
-					menu : menu
-				})*/
-				
 		// 下拉式按鈕多選單
 		var ItemPanel = Ext.create('Ext.panel.Panel', {
 					// title : 'Menu',
@@ -191,8 +115,12 @@ function showPage() {
 			},
 			width : 500,
 			height : 350,
+			bodyStyle:{
+				background : '#d3e1f1'
+			},
 			defaults : {
-				bodyStyle : 'padding:20px'
+				bodyStyle : 'padding:30px'
+				//style:'padding:20px'
 			},
 			items : [{
 				xtype : 'button',
@@ -240,7 +168,7 @@ function showPage() {
 				hidden : true
 			}, {
 				xtype : 'cusNumberField',
-				width:400
+				width : 400
 					// labelWidth : 110,
 					// fieldLabel : '數量',
 					// id : 'num',
@@ -248,12 +176,15 @@ function showPage() {
 					// value : '0',
 					// minValue : 0,
 					// maxValue : 999
-				}, {
+				}],
+				buttons:[{xtype:'tbfill'},{
 				xtype : 'button',
 				width : 120,
-				cls : 'search-toolbar',
-				height : 30,
+				cls : 'edit-toolbar',
+				height : 28,
 				text : '確定',
+				scale: 'large',
+				iconAlign:'right',
 				handler : function() {
 					var panel = Ext.getCmp('ItemPanel');
 					var btnList = panel.items;
@@ -263,7 +194,7 @@ function showPage() {
 						}
 					}
 				}
-			}]
+			},{xtype:'tbfill'}]
 		});
 
 		// 小算盤
@@ -369,7 +300,7 @@ function showPage() {
 		// width : 100
 		// } ]
 		// });
-		function cal() {
+		/*function cal() {
 			var num = Ext.getCmp('num').getValue();
 			if (this.value == -1) {
 				Ext.getCmp('num').setValue(0);
@@ -384,15 +315,30 @@ function showPage() {
 
 			}
 
-		}
+		}*/
+		
+		
+		Ext.create('FIZ.cus.calculator',{
+			title : '小算盤1',
+			id : 'calwindow'
+		});
 
-		Ext.create('Ext.window.Window', {
+		/*Ext.create('Ext.window.Window', {
 					title : '小算盤',
 					id : 'calwindow',
 					bodyPadding : 5,
 					height : 175,
+					closeAction:'hide',
 					resizable : false,
-					closable : false,
+					closable : true,
+					buttonAlign:'center',
+					fbar : [ {xtype: 'tbfill'},'-',{
+								text : '關閉',
+								handler : function() {
+									Ext.getCmp('calculatorBtn').value=0;
+									this.up('window').hide();
+								}
+							}, '-',{xtype: 'tbfill'}],
 					layout : {
 						type : 'table',
 						columns : 3
@@ -461,8 +407,15 @@ function showPage() {
 								value : -2,
 								text : '刪除',
 								width : 100
-							}]
-				});
+							}],
+						listeners:{
+							 onEsc: function(){
+							 	alert();
+							 	Ext.getCmp('calculatorBtn').value=0;
+									this.up('window').hide();
+							 }
+						}
+				});*/
 		// result view
 		function verifyAll(panel) {
 			var success = true;
@@ -507,7 +460,7 @@ function showPage() {
 							background : 'red'
 						},
 						fieldStyle : {
-							// background : 'red',
+					// background : 'red',
 						}
 							// colspan: 3
 						}, {
@@ -548,6 +501,9 @@ function showPage() {
 			// width : '100%',
 			resizable : true,
 			autoScroll : true,
+			bodyStyle:{
+				background : '#d3e1f1'
+			},
 			layout : {
 				type : 'table',
 				columns : 5

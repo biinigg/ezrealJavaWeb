@@ -16,8 +16,8 @@
 	position: absolute;
 	margin: 0 0 0 0;
 }
-.search-toolbar {
-	background-image: url(../images/button_icon/ToolBarSearch.png)
+.edit-toolbar {
+	background-image: url(../images/button_icon/ToolBarEdit.png)
 		!important;
 	border: 1 !important;
 	background-color: transparent !important;

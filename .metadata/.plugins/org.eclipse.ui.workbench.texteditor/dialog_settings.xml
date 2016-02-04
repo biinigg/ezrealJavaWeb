@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="269" key="DIALOG_WIDTH"/>
+		<item value="238" key="DIALOG_Y_ORIGIN"/>
+		<item value="387" key="DIALOG_HEIGHT"/>
+		<item value="211" key="DIALOG_X_ORIGIN"/>
+		<item value="1|微軟正黑體|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微軟正黑體" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
 		<item value="false" key="isRegEx"/>
-		<item value="FizString" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
-		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
+		<item value="確定" key="selection"/>
 		<list key="findhistory">
-			<item value="DCIString"/>
-			<item value="checkGuardServer"/>
-			<item value="getAllIP"/>
-			<item value="getConfigDate"/>
-			<item value="ConfigSaveStatus"/>
-			<item value="setContextPath"/>
-			<item value="contextInitialized"/>
-			<item value="startProcess"/>
+			<item value="確定"/>
+			<item value="menupanel"/>
+			<item value="count"/>
+			<item value="window"/>
+			<item value="tbfill"/>
+			<item value="tabfill"/>
+			<item value="fill"/>
+			<item value="filltab"/>
 		</list>
 		<list key="replacehistory">
+			<item value="num"/>
+			<item value="Test"/>
 			<item value="FizString"/>
 			<item value="DCI"/>
 			<item value="DataBaseObj"/>
 		</list>
-	</section>
-	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="365" key="DIALOG_WIDTH"/>
-		<item value="1|微軟正黑體|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|微軟正黑體" key="DIALOG_FONT_NAME"/>
-		<item value="494" key="DIALOG_HEIGHT"/>
-		<item value="617" key="DIALOG_X_ORIGIN"/>
-		<item value="297" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
