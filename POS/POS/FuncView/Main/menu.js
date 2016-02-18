@@ -1,72 +1,7 @@
-/**
- * 
- */
+// 20160212
 var t1, t2, t3, t4;
 function showPage() {
-
-	/*
-	 * Ext.Loader.setConfig({ enabled : true });
-	 * 
-	 * Ext.Loader.setPath('Ext.ux', '../ux/');
-	 * 
-	 * Ext.require(['Ext.tab.*', 'Ext.ux.TabCloseMenu']);
-	 */
 	Ext.onReady(function() {
-
-		/*
-		 * var currentItem;
-		 * 
-		 * var tabs = Ext.widget('tabpanel', { renderTo : 'tabs', resizeTabs :
-		 * true, enableTabScroll : true, width : 600, height : 250, defaults : {
-		 * autoScroll : true, bodyPadding : 10 }, items : [{ title : 'Tab 1',
-		 * iconCls : 'tabs', // html: 'Tab Body<br/><br/>' + //
-		 * Ext.example.bogusMarkup, closable : true }], plugins :
-		 * Ext.create('Ext.ux.TabCloseMenu', { extraItemsTail : ['-', { text :
-		 * 'Closable', checked : true, hideOnClick : true, handler :
-		 * function(item) { currentItem.tab .setClosable(item.checked); } },
-		 * '-', { text : 'Enabled', checked : true, hideOnClick : true, handler :
-		 * function(item) { currentItem.tab .setDisabled(!item.checked); } }],
-		 * listeners : { beforemenu : function(menu, item) { var enabled = menu
-		 * .child('[text="Enabled"]'); menu.child('[text="Closable"]')
-		 * .setChecked(item.closable); if (item.tab.active) { enabled.disable(); }
-		 * else { enabled.enable(); enabled.setChecked(!item.tab .isDisabled()); }
-		 * 
-		 * currentItem = item; } } }) });
-		 *  // tab generation code var index = 0;
-		 * 
-		 * while (index < 3) { addTab(index % 2); }
-		 * 
-		 * function doScroll(item) { var id = item.id.replace('_menu', ''), tab =
-		 * tabs.getComponent(id).tab;
-		 * 
-		 * tabs.getTabBar().layout.overflowHandler.scrollToItem(tab); }
-		 * 
-		 * function addTab(closable) { ++index; tabs.add({ closable :
-		 * !!closable, html : 'Tab Body ' + index + '<br/><br/>',// + //
-		 * Ext.example.bogusMarkup, iconCls : 'tabs', title : 'New Tab ' + index
-		 * }).show(); }
-		 * 
-		 * function addToMenu(ct, tab) { menu.add({ text : tab.title, id :
-		 * tab.id + '_menu', handler : doScroll }); }
-		 * 
-		 * function removeFromMenu(ct, tab) { var id = tab.id + '_menu';
-		 * menu.remove(id); }
-		 * 
-		 * tabs.on({ add : addToMenu, remove : removeFromMenu });
-		 * 
-		 * Ext.widget('button', { iconCls : 'new-tab', renderTo : 'addButtonCt',
-		 * text : 'Add Closable Tab', handler : function() { addTab(true); } });
-		 * 
-		 * Ext.widget('button', { iconCls : 'new-tab', renderTo : 'addButtonCt',
-		 * style : 'margin-left: 8px;', text : 'Add Unclosable Tab', handler :
-		 * function() { addTab(false); } });
-		 * 
-		 * var menu = new Ext.menu.Menu(); tabs.items.each(function(tab) {
-		 * addToMenu(tabs, tab); }); Ext.widget('button', { iconCls : 'scroll',
-		 * renderTo : 'addButtonCt', style : 'margin-left: 8px;', text : 'Scroll
-		 * to:', menu : menu })
-		 */
-
 		// 下拉式按鈕多選單
 		var ItemPanel = Ext.create('Ext.panel.Panel', {
 					// title : 'Menu',
@@ -107,7 +42,44 @@ function showPage() {
 
 		var menuPanel = Ext.create('Ext.form.Panel', {
 			title : 'Menu',
+			split : true,
+			// collapsible: true,
 			autoScroll : true,
+			dockedItems : [{
+				xtype : 'toolbar',
+				dock : 'top',
+				items : [{
+							xtype : 'tbfill'
+						}, {
+							xtype : 'button',
+							width : 120,
+							cls : 'edit-toolbar',
+							height : 28,
+							text : '確定',
+							scale : 'large',
+							iconAlign : 'right',
+							handler : function() {
+								var panel = Ext.getCmp('ItemPanel');
+								var btnList = panel.items;
+								for (var i = 0; i < btnList.length; i++) {
+									if (btnList.get(i).pressed) {
+										var text = btnList.get(i).text;
+										console.log(gridstore.data.items);
+										gridstore.add({
+													id : gridstore.data.items.length
+															+ 1,
+													name : text
+												});
+										gridPanel.update();
+									}
+								}
+
+							}
+						}, {
+							xtype : 'tbfill'
+						}]
+			}],
+			region : 'center',
 			layout : {
 				type : 'vbox',
 				align : 'center',
@@ -115,12 +87,12 @@ function showPage() {
 			},
 			width : 500,
 			height : 350,
-			bodyStyle:{
+			bodyStyle : {
 				background : '#d3e1f1'
 			},
 			defaults : {
 				bodyStyle : 'padding:30px'
-				//style:'padding:20px'
+				// style:'padding:20px'
 			},
 			items : [{
 				xtype : 'button',
@@ -147,275 +119,43 @@ function showPage() {
 								}
 							}]
 						})
-			}, ItemPanel, {
-				xtype : 'textfield',
-				labelWidth : 110,
-				fieldLabel : '單價',
-				id : 'price',
-				name : 'price',
-				value : 0,
-				readOnly : true,
-				minValue : 1
-			}, {
-				xtype : 'textfield',
-				labelWidth : 110,
-				fieldLabel : '單價',
-				id : 'item',
-				name : 'item',
-				value : '',
-				readOnly : true,
-				minValue : 1,
-				hidden : true
-			}, {
-				xtype : 'cusNumberField',
-				width : 400
-					// labelWidth : 110,
-					// fieldLabel : '數量',
-					// id : 'num',
-					// name : 'num',
-					// value : '0',
-					// minValue : 0,
-					// maxValue : 999
-				}],
-				buttons:[{xtype:'tbfill'},{
-				xtype : 'button',
-				width : 120,
-				cls : 'edit-toolbar',
-				height : 28,
-				text : '確定',
-				scale: 'large',
-				iconAlign:'right',
-				handler : function() {
-					var panel = Ext.getCmp('ItemPanel');
-					var btnList = panel.items;
-					for (var i = 0; i < btnList.length; i++) {
-						if (btnList.get(i).pressed) {
-							alert(btnList.get(i).text);
-						}
-					}
-				}
-			},{xtype:'tbfill'}]
+			}, ItemPanel,
+					/*
+					 * { xtype : 'textfield', labelWidth : 110, fieldLabel :
+					 * '單價', id : 'price', name : 'price', value : 0, readOnly :
+					 * true, minValue : 1 },
+					 */
+					{
+
+						xtype : 'textfield',
+						labelWidth : 110,
+						fieldLabel : '單價',
+						id : 'price',
+						name : 'price',
+						value : 0,
+						readOnly : true,
+						minValue : 1
+
+					}, {
+						xtype : 'textfield',
+						labelWidth : 110,
+						fieldLabel : '產品',
+						id : 'item',
+						name : 'item',
+						value : '',
+						readOnly : true,
+						minValue : 1,
+						hidden : true
+					}, {
+						xtype : 'cusNumberField',
+						width : 400
+					}]
 		});
 
-		// 小算盤
-		// function cal() {
-		// var count = Ext.getCmp('count').getValue();
-		// if (this.value == -1) {
-		// Ext.getCmp('count').setValue(0);
-		// } else if (this.value == -2) {
-		// Ext.getCmp('count').setValue(Math.floor(count / 10));
-		// } else {
-		// if (count > 0) {
-		// Ext.getCmp('count').setValue(
-		// count * 10 + this.value);
-		// } else {
-		// Ext.getCmp('count').setValue(this.value);
-		// }
-		//
-		// }
-		//
-		// }
-		// var digitForm = Ext.create('Ext.form.Panel', {
-		// title : 'Base Example',
-		// bodyPadding : 5,
-		// height : 175,
-		// // rowspan: 2,
-		// layout : {
-		// type : 'table',
-		// columns : 3
-		// },
-		// defaults : {
-		// bodyStyle : 'padding:20px',
-		// handler : cal
-		// },
-		// items : [ {
-		// xtype : 'numberfield',
-		// labelWidth : 110,
-		// fieldLabel : '數量',
-		// id : 'count',
-		// name : 'count',
-		// value : 0,
-		// minValue : 1,
-		// maxValue : 999,
-		// colspan : 3
-		// }, {
-		// xtype : 'button',
-		// value : 7,
-		// text : '7',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 8,
-		// text : '8',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 9,
-		// text : '9',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 4,
-		// text : '4',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 5,
-		// text : '5',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 6,
-		// text : '6',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 1,
-		// text : '1',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 2,
-		// text : '2',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 3,
-		// text : '3',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : -1,
-		// text : '清除',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : 0,
-		// text : '0',
-		// width : 100
-		// }, {
-		// xtype : 'button',
-		// value : -2,
-		// text : '刪除',
-		// width : 100
-		// } ]
-		// });
-		/*function cal() {
-			var num = Ext.getCmp('num').getValue();
-			if (this.value == -1) {
-				Ext.getCmp('num').setValue(0);
-			} else if (this.value == -2) {
-				Ext.getCmp('num').setValue(Math.floor(num / 10));
-			} else {
-				if (num > 0) {
-					Ext.getCmp('num').setValue(num * 10 + this.value);
-				} else {
-					Ext.getCmp('num').setValue(this.value);
-				}
-
-			}
-
-		}*/
-		
-		
-		Ext.create('FIZ.cus.calculator',{
-			title : '小算盤1',
-			id : 'calwindow'
-		});
-
-		/*Ext.create('Ext.window.Window', {
+		Ext.create('FIZ.cus.calculator', {
 					title : '小算盤',
-					id : 'calwindow',
-					bodyPadding : 5,
-					height : 175,
-					closeAction:'hide',
-					resizable : false,
-					closable : true,
-					buttonAlign:'center',
-					fbar : [ {xtype: 'tbfill'},'-',{
-								text : '關閉',
-								handler : function() {
-									Ext.getCmp('calculatorBtn').value=0;
-									this.up('window').hide();
-								}
-							}, '-',{xtype: 'tbfill'}],
-					layout : {
-						type : 'table',
-						columns : 3
-					},
-					defaults : {
-						bodyStyle : 'padding:20px',
-						handler : cal
-					},
-					items : [{
-								xtype : 'button',
-								value : 7,
-								text : '7',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 8,
-								text : '8',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 9,
-								text : '9',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 4,
-								text : '4',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 5,
-								text : '5',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 6,
-								text : '6',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 1,
-								text : '1',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 2,
-								text : '2',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 3,
-								text : '3',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : -1,
-								text : '清除',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : 0,
-								text : '0',
-								width : 100
-							}, {
-								xtype : 'button',
-								value : -2,
-								text : '刪除',
-								width : 100
-							}],
-						listeners:{
-							 onEsc: function(){
-							 	alert();
-							 	Ext.getCmp('calculatorBtn').value=0;
-									this.up('window').hide();
-							 }
-						}
-				});*/
+					id : 'calwindow'
+				});
 		// result view
 		function verifyAll(panel) {
 			var success = true;
@@ -437,17 +177,27 @@ function showPage() {
 
 		var resultForm = Ext.create('Ext.form.Panel', {
 					title : '總計',
+					split : true,
+					collapsible : true,
 					bodyPadding : 5,
 					height : 175,
-					// rowspan: 2,
-					// layout:'vbox',
-					// layout:{
-					// type:'table',
-					// columns: 3
-					// },
+					region : 'east',
+					buttons : [{
+								xtype : 'button',
+								text : '結帳',
+								width : 150,
+								handler : function() {
+									var panel = this.up('panel').up('panel');
+									if (verifyAll(panel)) {
+										alert(1);
+									} else {
+										alert(0);
+									}
+								}
+
+							}],
 					defaults : {
 						bodyStyle : 'padding:20px'
-						// handler : cal
 					},
 					items : [{
 						xtype : 'textfield',
@@ -478,39 +228,124 @@ function showPage() {
 						// fontSize : '8px',
 						}
 					}],
-					buttonAlign : 'center',
-					buttons : [{
-								xtype : 'button',
-								text : '結帳',
-								width : 150,
-								handler : function() {
-									var panel = this.up('panel').up('panel');
-									if (verifyAll(panel)) {
-										alert(1);
-									} else {
-										alert(0);
-									}
+					buttonAlign : 'center'
+				});
+		var headPanel = Ext.create('Ext.panel.Panel', {
+					bodyPadding : 5,
+					// height : 350,
+					region : 'west',
+					split : true,
+					defaults : {
+						bodyStyle : 'padding:20px'
+					},
+					items : [{
+								xtype : 'textfield',
+								labelWidth : 110,
+								fieldLabel : '單號',
+								id : 'orderid',
+								// value : '1',
+								readOnly : true,
+								layout : 'fit',
+								style : {
+					// background : 'red'
+								},
+								fieldStyle : {
+					// background : 'red',
 								}
-
+							}, {
+								xtype : 'datefield',
+								labelWidth : 110,
+								fieldLabel : '日期',
+								id : 'crtime',
+								// value : '1',
+								readOnly : true,
+								layout : 'fit',
+								style : {
+								// background : 'red'
+								},
+								fieldStyle : {
+								// background : 'red',
+								}
 							}]
+				});
+		var columns = [{
+					header : 'no.',
+					dataIndex : 'id'
+				}, {
+					header : 'itemName',
+					dataIndex : 'name'
+				}];
+		var data = [{
+					id : '1',
+					name : '糕餅'
+				}, {
+					id : '2',
+					name : '鳳眼糕'
+				}, {
+					id : '3',
+					name : '冬瓜糕'
+				}];
+		var gridstore = new Ext.data.Store({
+					data : data,
+					fields : ['id', 'name']
+				});
+
+		var gridPanel = Ext.create('Ext.grid.Panel', {
+					bodyPadding : 5,
+					// height : 350,
+					split : true,
+					autoScroll : true,
+					region : 'center',
+					store : gridstore,
+					columns : columns,
+					// collapsible : true,
+					// multiSelect : true,
+					viewConfig : {
+						forceFit : true,
+						stripeRows : true
+						// enableTextSelection : true
+					}
+				});
+		gridstore.load();
+		var documentPanel = Ext.create('Ext.panel.Panel', {
+					split : true,
+					collapsible : true,
+					title : '注意事項',
+					bodyPadding : 5,
+					weight : 350,
+					region : 'east',
+					defaults : {
+						bodyStyle : 'padding:20px'
+					},
+					items : [{}]
+				});
+		var gridForm = Ext.create('Ext.form.Panel', {
+					split : true,
+					collapsible : true,
+					title : '訂單明細',
+					bodyPadding : 5,
+					height : 350,
+					region : 'north',
+					layout : 'border',
+					defaults : {
+						bodyStyle : 'padding:20px'
+					},
+					items : [headPanel, gridPanel, documentPanel]
 				});
 
 		var main = Ext.create('Ext.panel.Panel', {
-			title : 'Count',
-			// height : '100%',
-			// width : '100%',
-			resizable : true,
-			autoScroll : true,
-			bodyStyle:{
-				background : '#d3e1f1'
-			},
-			layout : {
-				type : 'table',
-				columns : 5
-			},
-			renderTo : 'Caculator',
-			items : [menuPanel, resultForm]
-				// digitForm,
-			});
+					// split: true,
+					// collapsible: true,
+					title : 'Count',
+					height : '100%',
+					width : '100%',
+					autoScroll : true,
+					bodyStyle : {
+						background : '#d3e1f1'
+					},
+					layout : 'border',
+					renderTo : 'Caculator',
+					items : [menuPanel, gridForm, resultForm]
+				});
 	});
 }

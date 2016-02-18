@@ -122,7 +122,7 @@ Ext.define('FIZ.cus.numberField', {
 	items : [ {
 		xtype : 'numberfield',
 		labelWidth :80,
-		labelHeight : 30,
+		labelHeight : 40,
 		fieldLabel : '數量',
 		id : 'num',
 		name : 'num',

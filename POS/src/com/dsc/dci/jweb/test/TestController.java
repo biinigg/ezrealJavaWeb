@@ -29,7 +29,7 @@ public class TestController {
 //		if (dcikey != null && dcikey.equals(DCIWebConstants.getPostTagValue())) {
 			datas = new HashMap<String, Object>();
 			if (action.equals("save")) {
-				datas = new Test().getInitData(request.getParameter("sql_id"));
+				//datas = new Test().getInitData(request.getParameter("sql_id"));
 			}
 //		}
 

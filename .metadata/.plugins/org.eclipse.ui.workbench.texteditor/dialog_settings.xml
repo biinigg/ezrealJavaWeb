@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="269" key="DIALOG_WIDTH"/>
 		<item value="238" key="DIALOG_Y_ORIGIN"/>
-		<item value="387" key="DIALOG_HEIGHT"/>
 		<item value="211" key="DIALOG_X_ORIGIN"/>
+		<item value="387" key="DIALOG_HEIGHT"/>
 		<item value="1|微軟正黑體|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微軟正黑體" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="確定" key="selection"/>
+		<item value="price" key="selection"/>
 		<list key="findhistory">
+			<item value="price"/>
+			<item value="menuListener"/>
+			<item value="單價"/>
 			<item value="確定"/>
 			<item value="menupanel"/>
 			<item value="count"/>
 			<item value="window"/>
 			<item value="tbfill"/>
-			<item value="tabfill"/>
-			<item value="fill"/>
-			<item value="filltab"/>
 		</list>
 		<list key="replacehistory">
 			<item value="num"/>
@@ -31,5 +31,9 @@
 			<item value="DCI"/>
 			<item value="DataBaseObj"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="242" key="DIALOG_Y_ORIGIN"/>
+		<item value="452" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

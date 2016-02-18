@@ -26,8 +26,8 @@
 		<item value="491" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.wst.server.ui.ServersView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="184" key="DIALOG_Y_ORIGIN"/>
-		<item value="509" key="DIALOG_HEIGHT"/>
 		<item value="726" key="DIALOG_X_ORIGIN"/>
+		<item value="509" key="DIALOG_HEIGHT"/>
 		<item value="1|微軟正黑體|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|微軟正黑體" key="DIALOG_FONT_NAME"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.wst.server.ui"/>
